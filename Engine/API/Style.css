@@ -1,0 +1,66 @@
+/* API LESS */
+/* @todo: add LESS language */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+table th,
+table td {
+  text-align: left;
+  vertical-align: top;
+}
+a {
+  color: red;
+  text-decoration: none;
+}
+#menu {
+  background-color: #ececec;
+  text-align: center;
+  width: 100px;
+}
+#header {
+  background-color: #ececec;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+#footer {
+  background-color: #ececec;
+  bottom: 0;
+  font-size: large;
+  height: 20px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+#page {
+  background-color: whitesmoke;
+  height: 80%;
+  padding: 10px;
+}
+#minor {
+  font-size: large;
+}
+.failure {
+  color: #ff0000;
+}
+.in-hand {
+  color: #ffff00;
+}
+.success {
+  color: #00ff00;
+}
+.to-do {
+  color: #a3a3a3;
+}

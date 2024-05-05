@@ -1,0 +1,11 @@
+#blueprint-edit table th {
+  text-align: left;
+}
+#blueprint-edit input,
+#blueprint-edit select,
+#blueprint-edit textarea {
+  width: 100%;
+}
+#blueprint-edit textarea {
+  height: 300px;
+}
