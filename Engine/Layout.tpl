@@ -33,13 +33,6 @@
     </head>
     <body>
         <div id="head">
-            <a href="javascript:void(0)" class="butn" onclick="TARDIS.Plan.show();">Dissertation</a>
-            <a href="javascript:void(0)" class="butn" onclick="TARDIS.Degrees.getCollection();">Degrees</a>
-            <a href="javascript:void(0)" class="butn" onclick="TARDIS.Lessons.schedule('<?php echo gmdate('Y-m-d'); ?>');">Schedule</a>
-            <a href="javascript:void(0)" class="butn" onclick="TARDIS.Lessons.timetable();">Timetable</a>
-
-            &diams;
-
             <a href="javascript:void(0)" onclick="API.Questions.collection();" class="butn">Questions</a>
             <a href="javascript:void(0)" onclick="API.Questions.create();" class="butn">Create</a>
             <input type="text" id="tags" value="">
@@ -49,7 +42,6 @@
         <div id="page">
             <script>
                 API.Questions.collection();
-                // TARDIS.Plan.show();
             </script>
         </div>
     </body>
