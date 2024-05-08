@@ -8,7 +8,7 @@
         <a href="javascript:void(0)" onclick="$(this).parent().find('.theory').toggle();">Theory</a>
         <a href="javascript:void(0)" onclick="Testing.checkRadio('<?php echo $entity->getKey(); ?>');">Check</a>
         <hr/>
-        <?php echo \Liloi\Stylo\Parser::parseString($entity->getElement('question')); ?>
+        <?php echo $entity->getQuestion(); ?>
     </div>
 
     <div class="answer">
