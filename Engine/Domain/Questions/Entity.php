@@ -115,4 +115,18 @@ class Entity extends AbstractEntity
 
         return $data[$key];
     }
+
+    public function getQuestion(): string
+    {
+        $question = $this->getElement('question');
+
+        if(is_array($question))
+        {
+            $question = implode("\n", $question);
+        }
+
+        $question = Parser::parseString($question);
+
+        return $question;
+    }
 }
