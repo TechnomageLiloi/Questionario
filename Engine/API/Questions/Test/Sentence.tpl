@@ -6,6 +6,8 @@
     <a href="javascript:void(0)" onclick="$(this).parent().find('.theory').toggle();">Theory</a>
     <a href="javascript:void(0)" onclick="Testing.checkSentence('<?php echo $entity->getKey(); ?>');">Check</a>
     <hr/>
+    <?php echo $entity->getQuestion(); ?>
+
     <div class="sentence">
         <?php $sentence = $entity->getElement('sentence'); ?>
 
@@ -13,7 +15,7 @@
             <?php if(str_starts_with($block, '==')): ?>
                 <input type="text" data-correct="<?php echo str_replace('==', '', $block); ?>">
             <?php else: ?>
-                <?php echo \Liloi\Stylo\Parser::parseString($block); ?>
+                <?php echo $block; ?>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>

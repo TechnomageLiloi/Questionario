@@ -87,6 +87,12 @@ class Entity extends AbstractEntity
         return $data[$key];
     }
 
+    public function isElement(string $key): bool
+    {
+        $data = json_decode($this->getProgram(), JSON_UNESCAPED_UNICODE);
+        return array_key_exists($key, $data);
+    }
+
     /**
      * Save question to database.
      */
@@ -118,7 +124,14 @@ class Entity extends AbstractEntity
 
     public function getQuestion(): string
     {
-        $question = $this->getElement('question');
+        $key = 'question';
+
+        if(!$this->isElement($key))
+        {
+            return '';
+        }
+
+        $question = $this->getElement($key);
 
         if(is_array($question))
         {
