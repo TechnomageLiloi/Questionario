@@ -3,6 +3,7 @@
 namespace Liloi\Rune\Domain\Questions;
 
 use Liloi\Rune\Domain\Manager as DomainManager;
+use Liloi\Rune\Domain\Suites\Manager as SuitesManager;
 
 /**
  * Question's manager.
@@ -123,8 +124,11 @@ class Manager extends DomainManager
     // @todo: rise this method to more abstract level.
     public static function create(): array
     {
+        $key_suite = SuitesManager::linkToName($_SERVER['REQUEST_URI']);
+
         $name = self::getTableName();
         $data = [
+            'key_suite' => $key_suite,
             'title' => 'Enter the title',
             'status' => Statuses::TODO,
             'type' => Types::CARD,
