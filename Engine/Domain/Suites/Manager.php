@@ -124,6 +124,7 @@ class Manager extends DomainManager
 
     public static function linkToName(string $link): string
     {
+        $link = str_replace(ROOT_URL, '', $link);
         $part = strtolower(trim(str_replace('/', ':', $link), ':'));
 
         if(!$part)

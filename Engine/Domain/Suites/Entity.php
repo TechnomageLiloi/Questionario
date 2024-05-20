@@ -40,10 +40,10 @@ class Entity extends AbstractEntity
 
         if($name === 'rune')
         {
-            return '/';
+            return ROOT_URL ?? '/';
         }
 
         $name = str_replace('rune:', '', $name);
-        return '/' . str_replace(':', '/', $name);
+        return ROOT_URL . '/' . str_replace(':', '/', $name);
     }
 }
