@@ -38,12 +38,12 @@ class Entity extends AbstractEntity
     {
         $name = $this->getKey();
 
-        if($name === 'rune')
+        if($name === 'root')
         {
             return ROOT_URL ?? '/';
         }
 
-        $name = str_replace('rune:', '', $name);
+        $name = str_replace('root:', '', $name);
         return ROOT_URL . '/' . str_replace(':', '/', $name);
     }
 }

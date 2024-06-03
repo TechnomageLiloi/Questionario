@@ -129,9 +129,9 @@ class Manager extends DomainManager
 
         if(!$part)
         {
-            return 'rune';
+            return 'root';
         }
 
-        return 'rune:' . $part;
+        return 'root:' . $part;
     }
 }
